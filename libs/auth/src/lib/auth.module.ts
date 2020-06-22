@@ -6,13 +6,14 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromAuth from './+state/auth.reducer';
 import { AuthEffects } from './+state/auth.effects';
 import { AuthFacade } from './+state/auth.facade';
+import { LoginComponent } from './container/login/login.component';
 
 @NgModule({
   imports: [
     CommonModule,
 
     RouterModule.forChild([
-      /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
+       {path: '', pathMatch: 'full', component: LoginComponent}  
     ]),
 
     StoreModule.forFeature(fromAuth.AUTH_FEATURE_KEY, fromAuth.reducer),
@@ -20,5 +21,6 @@ import { AuthFacade } from './+state/auth.facade';
     EffectsModule.forFeature([AuthEffects]),
   ],
   providers: [AuthFacade],
+  declarations: [LoginComponent],
 })
 export class AuthModule {}

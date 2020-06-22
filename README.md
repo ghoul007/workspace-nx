@@ -15,6 +15,12 @@ ng g ngrx app --module=apps/customer-portal/src/app/app.module.ts
 ng s customer-portal --port 4201
 
 
-ng g lib auth --routing --lazy --parent-module=apps/customer-portal/src/app/app.module.ts
+ng g lib auth --routing --lazy --parent-module=apps/customer-portal/src/app/app.module.ts   
+//-> --directory=shared
+
+ng g ngrx auth --module=libs/auth/src/lib/auth.module.ts
+
+ng g c container/login
+
 
  ```
