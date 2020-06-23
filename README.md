@@ -1,4 +1,6 @@
- ### commands
+ ## Test MonoRepo project
+ ### Commands
+
 
  ```
 npx create-nx-workspace demo-workspace
@@ -21,6 +23,6 @@ ng g lib auth --routing --lazy --parent-module=apps/customer-portal/src/app/app.
 ng g ngrx auth --module=libs/auth/src/lib/auth.module.ts
 
 ng g c container/login
-
+ng g c components/login-form
 
  ```

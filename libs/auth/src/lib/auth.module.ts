@@ -7,6 +7,7 @@ import * as fromAuth from './+state/auth.reducer';
 import { AuthEffects } from './+state/auth.effects';
 import { AuthFacade } from './+state/auth.facade';
 import { LoginComponent } from './container/login/login.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,6 @@ import { LoginComponent } from './container/login/login.component';
     EffectsModule.forFeature([AuthEffects]),
   ],
   providers: [AuthFacade],
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, LoginFormComponent],
 })
 export class AuthModule {}

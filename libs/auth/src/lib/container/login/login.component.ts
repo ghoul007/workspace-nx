@@ -1,3 +1,5 @@
+import { loadAuth } from './../../+state/auth.actions';
+import { AuthFacade } from './../../+state/auth.facade';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authFacade: AuthFacade) { }
 
   ngOnInit(): void {
+    this.authFacade.dispatch(loadAuth())
   }
 
 }
